@@ -1,0 +1,25 @@
+Streams
+
+Terminal vs non-terminal operations
+forEach, filter, map, flatMap
+Reduction - reduce and collect
+Collectors
+Primitive Stream Types
+Parallel Streams
+Optional
+
+Generics
+Creating Generic Types
+Generic Methods
+Type Variable Bounds
+Type Erasure
+Inheritance and Generics
+Co- and Contra-Variance
+
+Lambda Expressions
+Lambda Syntax
+Constraints on Using Lambdas
+Functional Interfaces
+Method References
+
+
