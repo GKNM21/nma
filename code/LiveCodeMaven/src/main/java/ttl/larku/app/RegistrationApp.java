@@ -1,11 +1,11 @@
 package ttl.larku.app;
 
-import java.time.LocalDate;
-import java.util.List;
-
 import ttl.larku.dao.StudentDAO;
 import ttl.larku.domain.Student;
 import ttl.larku.service.StudentService;
+
+import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @author whynot

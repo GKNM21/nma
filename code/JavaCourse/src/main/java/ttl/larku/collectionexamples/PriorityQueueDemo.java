@@ -1,4 +1,4 @@
-package ttl.larku.concurrentcollections;
+package ttl.larku.collectionexamples;
 
 import java.util.Comparator;
 import java.util.Objects;
