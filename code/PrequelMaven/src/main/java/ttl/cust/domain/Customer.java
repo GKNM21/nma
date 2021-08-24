@@ -1,4 +1,4 @@
-package ttl.cust;
+package ttl.cust.domain;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

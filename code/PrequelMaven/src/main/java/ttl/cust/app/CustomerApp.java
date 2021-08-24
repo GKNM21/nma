@@ -1,10 +1,10 @@
 package ttl.cust.app;
 
-import ttl.cust.Customer;
-import ttl.cust.service.CustomerService;
-
 import java.time.LocalDate;
 import java.util.List;
+
+import ttl.cust.domain.Customer;
+import ttl.cust.service.CustomerService;
 
 /**
  * @author whynot

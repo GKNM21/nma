@@ -1,10 +1,10 @@
 package ttl.cust.service;
 
-import ttl.cust.Customer;
-import ttl.cust.ttl.cust.dao.CustomerDAO;
-
 import java.time.LocalDate;
 import java.util.List;
+
+import ttl.cust.domain.Customer;
+import ttl.cust.ttl.cust.dao.CustomerDAO;
 
 /**
  * @author whynot
