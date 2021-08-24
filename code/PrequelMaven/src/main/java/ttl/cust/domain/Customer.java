@@ -8,7 +8,12 @@ import java.util.Objects;
 /**
  * @author whynot
  */
-public class Customer {
+public class Customer implements Comparable<Customer>{
+
+    @Override
+    public int compareTo(Customer other) {
+        return Integer.compare(this.id, other.id);
+    }
 
     public enum Status {
         Privileged,
