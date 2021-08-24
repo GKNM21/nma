@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
@@ -47,15 +48,40 @@ public class Sorting {
 
     	Collections.sort(students, byName);
 
-        Collections.sort(students, (s1, s2) -> s1.getName().compareTo(s2.getName()));
+        Collections.sort(students, (s1, s2) -> {
+            //Lots of code
+            return s1.getName().compareTo(s2.getName());
+        });
+
+
+        Collections.sort(students, this::complicatedComparison);
 
         System.out.println("By name");
-        for(Student s : students) {
-            System.out.println(s);
-        }
+
+        //students.forEach(s -> System.out.println(s));
+//        students.forEach(System.out::println);
+
+        students.forEach(this::prettyPrint);
+        students.forEach(s -> this.prettyPrint(s));
+
+//        for(Student s : students) {
+//            System.out.println(s);
+//        }
+    }
+
+    public int complicatedComparison(Student s1, Student s2) {
+        ////Lots of code
+        return s1.getName().compareTo(s2.getName());
     }
 
 
-    //int 	compare(T o1, T o2)
+    public int pp(String s) {
+        return 10;
+    }
+    public void prettyPrint(Student st) {
+        System.out.println("<<<" + st + ">>>");
+    }
+
+
 
 }
