@@ -8,7 +8,8 @@ import java.util.Objects;
 /**
  * @author whynot
  */
-public class Student {
+public class Student implements Comparable<Student>{
+
 
     public enum Status {
         FULL_TIME,
@@ -121,5 +122,18 @@ public class Student {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, phoneNumbers, dob, status);
+    }
+
+    @Override
+    public int compareTo(Student other) {
+//        if(this.id < other.id) {
+//            return -1;
+//        }else if(this.id == other.id) {
+//            return 0;
+//        }else {
+//            return 1;
+//        }
+
+        return Integer.compare(this.id, other.id);
     }
 }

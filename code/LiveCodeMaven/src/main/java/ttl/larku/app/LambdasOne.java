@@ -11,18 +11,18 @@ import java.util.List;
 /**
  * @author whynot
  */
-public class FilteringApp {
+public class LambdasOne {
 
     private StudentService studentService;
 
     public static void main(String[] args) {
-        FilteringApp fa = new FilteringApp();
+        LambdasOne fa = new LambdasOne();
 //        fa.callBadChecker();
 //        fa.callBetterChecker();
         fa.callBetterCheckerWithLambdas();
     }
 
-    public FilteringApp() {
+    public LambdasOne() {
         studentService = new StudentService();
         Utils.fillStudents(studentService);
     }
