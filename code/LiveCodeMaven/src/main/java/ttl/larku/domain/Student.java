@@ -19,12 +19,20 @@ public class Student implements Comparable<Student>{
 
     private int id;
     private String name;
+    private String otherProperty;
     private List<String> phoneNumbers; // = new ArrayList<>();
     private LocalDate dob;
     private Status status = Status.FULL_TIME;
-    
 
-//    public Student() {}
+    public String getOtherProperty() {
+        return otherProperty;
+    }
+
+    public void setOtherProperty(String otherProperty) {
+        this.otherProperty = otherProperty;
+    }
+
+    //    public Student() {}
 
     public Student(String name, LocalDate dob, Status status) {
 //        this(id, name,  dob, status, phoneNumbers);
