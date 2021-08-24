@@ -1,5 +1,10 @@
-Streams
+Lambda Expressions
+Lambda Syntax
+Constraints on Using Lambdas
+Functional Interfaces
+Method References
 
+Streams
 Terminal vs non-terminal operations
 forEach, filter, map, flatMap
 Reduction - reduce and collect
@@ -16,10 +21,5 @@ Type Erasure
 Inheritance and Generics
 Co- and Contra-Variance
 
-Lambda Expressions
-Lambda Syntax
-Constraints on Using Lambdas
-Functional Interfaces
-Method References
 
 
