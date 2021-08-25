@@ -1,4 +1,4 @@
-package ttl.cust.ttl.cust.dao;
+package ttl.cust.dao;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

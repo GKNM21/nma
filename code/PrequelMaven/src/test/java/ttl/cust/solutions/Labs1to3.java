@@ -1,4 +1,4 @@
-package ttl.cust.ttl.cust.solutions;
+package ttl.cust.solutions;
 
 import org.junit.jupiter.api.Test;
 import ttl.cust.app.CustomerApp;
