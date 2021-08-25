@@ -3,11 +3,15 @@ package ttl.larku.app;
 import ttl.larku.domain.Student;
 import ttl.larku.service.StudentService;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * @author whynot
@@ -38,12 +42,9 @@ public class Streams1 {
                         s -> s.getName());
 
         List<String> namesOfHibernators2 = students.stream()
-                .peek(s -> System.out.println("Peek 1: " + s))
                 .filter(s -> s.getStatus() == Student.Status.HIBERNATING)
-                .peek(s -> System.out.println("Peek 2: " + s))
                 .map(s -> s.getName())
-                .peek(s -> System.out.println("Peek 3: " + s))
-                .collect(Collectors.toList());
+                .collect(toList());
         namesOfHibernators2.forEach(System.out::println);
 
         String csvList = students.stream()
@@ -63,7 +64,6 @@ public class Streams1 {
                 .count();
 
         System.out.println("hibNum: " + hibNum);
-
 
     }
 

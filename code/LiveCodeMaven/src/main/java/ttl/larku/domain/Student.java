@@ -34,9 +34,13 @@ public class Student implements Comparable<Student>{
 
     //    public Student() {}
 
-    public Student(String name, LocalDate dob, Status status) {
+    public Student(String name, LocalDate dob, Status status, String ... phoneArgs) {
 //        this(id, name,  dob, status, phoneNumbers);
         this(name,  dob, status, new ArrayList<String>());
+
+        for(String pn : phoneArgs) {
+            phoneNumbers.add(pn);
+        }
 //        this.id = id;
 //        this.name = name;
 //        this.dob = dob;

@@ -3,8 +3,8 @@ package ttl.cust.service;
 import java.time.LocalDate;
 import java.util.List;
 
+import ttl.cust.dao.CustomerDAO;
 import ttl.cust.domain.Customer;
-import ttl.cust.ttl.cust.dao.CustomerDAO;
 
 /**
  * @author whynot
