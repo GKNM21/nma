@@ -75,7 +75,8 @@ public class Labs7To9 {
 
         List<Student> students = ss.getAllStudents();
 
-        OptionalDouble ds = students.stream()
+//        OptionalDouble ds = students.stream()
+        DoubleStream ds = students.stream()
                 .peek(s -> {
                     System.out.println("In Peek 1: " + s);
                 })
@@ -90,8 +91,8 @@ public class Labs7To9 {
 //                .map(s -> s.getDob().until(LocalDate.now(), ChronoUnit.YEARS))
                 .peek(s -> {
                     System.out.println("In Peek 2: " + s);
-                })
-                .average();
+                });
+//                .average();
 
     }
 
