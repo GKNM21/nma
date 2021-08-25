@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class StudentDAO {
+public class JpaStudentDAO implements BaseDAO{
 
 	private Map<Integer, Student> students = new ConcurrentHashMap<>();
     //private static int nextId = 1;
@@ -17,6 +17,7 @@ public class StudentDAO {
 	public int insert(Student s) {
         int id = nextId.getAndIncrement();
         s.setId(id);
+        s.setName("JPA-" + s.getName());
 		students.put(id, s);
 		
 		return id;

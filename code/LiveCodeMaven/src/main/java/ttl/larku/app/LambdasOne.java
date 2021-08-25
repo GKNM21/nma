@@ -1,5 +1,6 @@
 package ttl.larku.app;
 
+import ttl.larku.dao.TheFactory;
 import ttl.larku.domain.Student;
 import ttl.larku.service.StudentService;
 
@@ -23,7 +24,8 @@ public class LambdasOne {
     }
 
     public LambdasOne() {
-        studentService = new StudentService();
+//        studentService = new StudentService();
+        studentService = TheFactory.getService();
         Utils.fillStudents(studentService);
     }
 

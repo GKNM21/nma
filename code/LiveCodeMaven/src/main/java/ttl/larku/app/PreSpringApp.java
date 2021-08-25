@@ -11,20 +11,19 @@ import java.util.List;
 /**
  * @author whynot
  */
-public class RegistrationApp {
+public class PreSpringApp {
 
-    //	private StudentService studentService = new StudentService();
+    private StudentService studentService = TheFactory.getService();
+
     public static void main(String[] args) {
         //testDAO();
-        RegistrationApp rapp = new RegistrationApp();
+        PreSpringApp rapp = new PreSpringApp();
         rapp.postRequest();
 
         rapp.getRequest();
     }
 
     public void postRequest() {
-//        StudentService studentService = new StudentService();
-        StudentService studentService = TheFactory.getService();
         Utils.fillStudents(studentService);
         Student student = new Student("Josephine", LocalDate.of(1970, 2, 2), Student.Status.FULL_TIME);
         int id1 = studentService.createStudent(student);
@@ -39,8 +38,6 @@ public class RegistrationApp {
     }
 
     public List<Student> getRequest() {
-//        StudentService studentService = new StudentService();
-        StudentService studentService = TheFactory.getService();
         List<Student> students = studentService.getAllStudents();
         System.out.println("GetRequest");
         for (Student s : students) {
@@ -49,8 +46,6 @@ public class RegistrationApp {
 
         return students;
     }
-
-
 
 
     public static void testStudent() {

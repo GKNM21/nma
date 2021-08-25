@@ -1,14 +1,12 @@
 package ttl.larku.app;
 
+import ttl.larku.dao.TheFactory;
 import ttl.larku.domain.Student;
 import ttl.larku.service.StudentService;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
 
 /**
  * @author whynot
@@ -23,7 +21,8 @@ public class Sorting {
     }
 
     public Sorting() {
-        studentService = new StudentService();
+//        studentService = new StudentService();
+        studentService = TheFactory.getService();
         Utils.fillStudents(studentService);
     }
 

@@ -1,10 +1,9 @@
 package ttl.larku.app;
 
+import ttl.larku.dao.TheFactory;
 import ttl.larku.domain.Student;
 import ttl.larku.service.StudentService;
 
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
@@ -26,7 +25,8 @@ public class Streams1 {
     }
 
     public Streams1() {
-        studentService = new StudentService();
+        //studentService = new StudentService();
+        studentService = TheFactory.getService();
         Utils.fillStudents(studentService);
     }
 

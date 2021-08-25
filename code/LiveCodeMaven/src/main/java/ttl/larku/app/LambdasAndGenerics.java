@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
+import ttl.larku.dao.TheFactory;
 import ttl.larku.domain.Student;
 import ttl.larku.service.StudentService;
 
@@ -20,7 +21,8 @@ public class LambdasAndGenerics {
     }
 
     public LambdasAndGenerics() {
-        studentService = new StudentService();
+//        studentService = new StudentService();
+        studentService = TheFactory.getService();
         Utils.fillStudents(studentService);
     }
 
