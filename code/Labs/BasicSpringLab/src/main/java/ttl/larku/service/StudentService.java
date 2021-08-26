@@ -1,5 +1,6 @@
 package ttl.larku.service;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import ttl.larku.dao.BaseDAO;
 import ttl.larku.domain.Student;

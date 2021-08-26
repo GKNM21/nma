@@ -20,11 +20,6 @@ public class LarkUConfig {
         return new InMemoryStudentDAO();
     }
 
-    @Bean
-    public BaseDAO<Student> jpaStudentDAO() {
-        return new InMemoryStudentDAO();
-    }
-
     /*
     <bean id="studentService" class="ttl.larku.service.StudentService" >
         <property name="studentDAO" ref="inMemoryStudentDAO"/>
@@ -39,4 +34,5 @@ public class LarkUConfig {
 
         return studentService;
     }
+
 }

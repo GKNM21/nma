@@ -5,12 +5,14 @@ import org.springframework.stereotype.Component;
 import ttl.larku.dao.BaseDAO;
 import ttl.larku.domain.Course;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Component
 public class CourseService {
 
-    @Autowired
+//    @Autowired
+    @Resource(name = "jpaCourseDAO")
     private BaseDAO<Course> courseDAO;
 
     public CourseService() {
