@@ -41,6 +41,7 @@
 **/.hprof
 **/.metadata/
 **/loginfofile
+**/logs
 
 ### VS Code ###
 .vscode/
