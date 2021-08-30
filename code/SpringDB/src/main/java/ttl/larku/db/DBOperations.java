@@ -5,6 +5,7 @@ import ttl.larku.domain.ScheduledClass;
 import ttl.larku.domain.Student;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -62,17 +63,17 @@ public class DBOperations {
     public void createData() {
 
         em.getTransaction().begin();
-        Student student = new Student("Manoj", "222 383 3838", Student.Status.FULL_TIME);
+        Student student = new Student("Manoj", "222 383 3838", LocalDate.of(1999, 8, 5), Student.Status.FULL_TIME);
 
         em.persist(student);
 
-        student = new Student("Ana", "333 3839292", Student.Status.FULL_TIME);
+        student = new Student("Ana", "333 3839292", LocalDate.of(1999, 8, 5), Student.Status.FULL_TIME);
         em.persist(student);
 
-        student = new Student("Roberta", "382 4849292", Student.Status.HIBERNATING);
+        student = new Student("Roberta", "382 4849292", LocalDate.of(1999, 8, 5), Student.Status.HIBERNATING);
         em.persist(student);
 
-        student = new Student("Madhu", "382 884 9993", Student.Status.PART_TIME);
+        student = new Student("Madhu", "382 884 9993", LocalDate.of(1999, 8, 5), Student.Status.PART_TIME);
         em.persist(student);
 
         Course course1 = new Course("MATH-101", "Introduction to Math");

@@ -1,5 +1,6 @@
 package ttl.larku.app;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -44,10 +45,10 @@ public class RegistrationApp {
     }
 
     public static void initStudents(StudentDaoService ss) {
-        ss.createStudent("Manoj", "282 939 9944", Student.Status.FULL_TIME);
-        ss.createStudent("Charlene", "282 898 2145", Student.Status.FULL_TIME);
-        ss.createStudent("Firoze", "228 678 8765", Student.Status.HIBERNATING);
-        ss.createStudent("Joe", "3838 678 3838", Student.Status.PART_TIME);
+        ss.createStudent("Manoj", "282 939 9944", LocalDate.of(1999, 10, 20), Student.Status.FULL_TIME);
+        ss.createStudent("Charlene", "282 898 2145", LocalDate.of(2000, 5, 20), Student.Status.FULL_TIME);
+        ss.createStudent("Firoze", "228 678 8765", LocalDate.of(1972, 8, 20), Student.Status.HIBERNATING);
+        ss.createStudent("Joe", "3838 678 3838", LocalDate.of(2010, 7, 20), Student.Status.PART_TIME);
     }
 
     public static void initCourses(CourseService cs) {

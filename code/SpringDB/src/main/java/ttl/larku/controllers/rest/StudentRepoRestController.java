@@ -16,7 +16,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/adminrest/student")
+@RequestMapping("/adminrest/repostudent")
 public class StudentRepoRestController {
 
     private final UriCreator uriCreator;
